@@ -1,0 +1,21 @@
+type Persona {
+	id: ID!
+	nombre: String
+	correo: String!
+	apellidoPaterno: String
+	apellidoMaterno: String
+	fechaNacimiento: String
+}
+type Query {
+	personas(cantidad: Int): [Persona]
+	persona(id: ID): Persona
+}
+type Mutation {
+	registrarPersona(
+		nombre: String!
+		correo: String!
+		apellidoPaterno: String
+		apellidoMaterno: String
+		fechaNacimiento: String
+	): Persona
+}
